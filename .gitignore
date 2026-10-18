@@ -1,0 +1,19 @@
+# Generated machine inventory and logs must never enter this portfolio repo.
+info
+OS_RESULT.tar
+*.log
+*.vdi
+*.vbox
+*.vbox-prev
+*.sav
+*.pem
+*.key
+id_*
+authorized_keys
+known_hosts
+sasl_passwd*
+.env*
+*.db
+*.sqlite*
+*.tar
+*.gz

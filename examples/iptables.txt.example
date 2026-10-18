@@ -1,0 +1,3 @@
+# Public example only. Live IP addresses, counters, and rule output are omitted.
+# Assignment concept: drop external incoming TCP/80 while leaving loopback usable.
+-A INPUT ! -i lo -p tcp --dport 80 -j DROP

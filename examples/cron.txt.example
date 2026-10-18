@@ -1,0 +1,3 @@
+# Public example only. The real email recipient is intentionally omitted.
+# Root crontab; previous day's logs, high detail, daily at 00:00 VM local time.
+0 0 * * * /usr/sbin/logwatch --range yesterday --detail high --service all --output mail --mailto person@example.invalid

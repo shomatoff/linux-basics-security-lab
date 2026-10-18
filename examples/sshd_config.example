@@ -1,0 +1,9 @@
+# Public example only. Real SSH host, account name, private/public keys,
+# authorized_keys, and network endpoint are intentionally omitted.
+# Replace and test on a disposable VM before applying your own configuration.
+PermitRootLogin no
+PubkeyAuthentication yes
+AuthenticationMethods publickey
+PasswordAuthentication no
+KbdInteractiveAuthentication no
+PermitEmptyPasswords no
