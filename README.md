@@ -32,7 +32,7 @@
 
 **Verification.** Scripts, access rules, Apache, SSH, firewall, and SMTP acceptance of a test report were checked on a separate Kali VM. The VM must be running at the scheduled time for daily mail to be sent.
 
-**Privacy.** This public repository contains no real IP addresses, SSH login details, keys, email address or password, logs, or system inventory archive. `examples/` uses comments and `example.invalid` placeholders. World-writable `/var` and passwordless sudo are assignment-specific lab settings and are not appropriate for production.
+**Privacy.** This public repository contains no real IP addresses, SSH login details, keys, email address or password, logs, or system inventory archive. `examples/` uses comments and `example.invalid` placeholders. World-writable `/var` and passwordless sudo are lab-only settings and are not appropriate for production.
 
 ## Repository contents
 

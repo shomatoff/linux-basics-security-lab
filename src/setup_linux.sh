@@ -37,8 +37,8 @@ for name in secret_agent secret_spy secret_boss; do
     # New files also need group access, not only the current home contents.
     for startup in .profile .bashrc; do
         touch "$home_dir/$startup"
-        if ! grep -qx 'umask 0007 # School21 secret_users' "$home_dir/$startup"; then
-            sed -i '1i umask 0007 # School21 secret_users' "$home_dir/$startup"
+        if ! grep -qx 'umask 0007 # lab secret_users' "$home_dir/$startup"; then
+            sed -i '1i umask 0007 # lab secret_users' "$home_dir/$startup"
         fi
         chown "$name:secret_users" "$home_dir/$startup"
         chmod 0660 "$home_dir/$startup"
@@ -58,5 +58,5 @@ sudoers_file=$(mktemp)
 trap 'rm -f -- "$sudoers_file"' EXIT
 printf '%%default_users ALL=(ALL:ALL) NOPASSWD: ALL\n' >"$sudoers_file"
 visudo -cf "$sudoers_file"
-install -o root -g root -m 0440 "$sudoers_file" /etc/sudoers.d/99-school21-default-users
+install -o root -g root -m 0440 "$sudoers_file" /etc/sudoers.d/99-lab-default-users
 visudo -c
